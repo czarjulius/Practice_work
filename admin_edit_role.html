@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./css/dashboard.css">
+<link rel="stylesheet" href="./css/admin_dashboard.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="#home">
+    <div class="profile-img">
+      <img src="" alt="">
+    </div>
+    <p class="profile-name">Julius Ngwu</p> 
+  </a>
+  <a href="user_create-account.html">Create Account</a>
+  <a href="user_acc_profile.html">Account Profile </a>
+  <a class="active" href="transaction_detail.html">Histroy</a>
+</div>
+
+<div class="content">
+  <div class="dashboard-header">
+    <h2>Dashboard</h2>
+    <p>This example use media queries to transform the sidebar screen size is 700px or less.</p> 
+  </div>
+  <div class="dasboard-body">
+      <div class="header-bg">
+          <img src="./image/transaction_bg.jpg" alt="">
+      </div>
+      <div class="details-container">
+          <div class="transactions">
+              <table>
+                <tr class="nextPrevious">
+                  <td></td>
+                  <td><input type="text" placeholder="Account Number">
+                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                  </td> 
+                  <td colspan="2"></td>                  
+                </tr>
+                <tr>
+                  <th>Acount Name</th>
+                  <th>Account Number</th>
+                  <th>Acc. Type</th>
+                  <th>Role</th>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Savings</td>
+                  <td class="staff-action">
+                    <select name="" type="text" class="form-control" >
+                      <option value = "">Staff</option><br />
+                      <option value = "">User</option>
+                      <option value = "">Admin</option><br />
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Current</td>
+                  <td class="staff-action">
+                    <select name="" type="text" class="form-control" >
+                      <option value = "">Admin</option><br />
+                      <option value = "">User</option>
+                      <option value = "">Staff</option><br />
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Current</td>
+                  <td class="staff-action">
+                    <select name="" type="text" class="form-control" >
+                      <option value = "">Staff</option><br />
+                      <option value = "">User</option>
+                      <option value = "">Admin</option><br />
+                    </select>
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Savings</td>
+                  <td class="staff-action">
+                    <select name="" type="text" class="form-control" >
+                      <option value = "">User</option>
+                      <option value = "">Staff</option><br />
+                      <option value = "">Admin</option><br />
+                    </select>
+                  </td>
+                </tr>
+                <tr class="nextPrevious">
+                  <td><a href="#" ><i class="fa fa-angle-double-left"></i> Previous</a></td>
+                  <td><a href="#" >Next<i class="fa fa-angle-double-right"></i></a></td> 
+                  <td colspan="2"></td>
+                  
+                </tr>
+                <tr class="nextPrevious">
+                    <td></td>
+                    <td><a href="#" >Update</a></td> 
+                    <td colspan="2"></td>
+                    
+                  </tr>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+<footer>
+    <p>My Banka, Copyright &copy; 2019</p>
+</footer> 
+</body>
+</html>

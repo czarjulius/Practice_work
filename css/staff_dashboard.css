@@ -1,0 +1,47 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: center;
+  padding: 15px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.details-container {
+  display: flex;
+  margin-top: 20px;
+}
+.transactions {
+  overflow-x:auto;
+  margin: auto;
+}
+
+.debit-cash {
+  color: rgb(247, 9, 9);
+}
+
+.nextPrevious td {
+  padding: 20px;
+  font-size: 18px;
+  color: rgb(34, 61, 20);
+}
+
+.fa{
+padding: 10px;
+}
+.fa-trash-o {
+  color: rgb(185, 57, 57);
+}
+
+.fa-pencil-square-o {
+  color: rgb(73, 73, 47);
+}
+
+.fa-eye {
+  color: rgb(28, 34, 28);
+}

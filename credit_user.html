@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/dashboard.css">
+<link rel="stylesheet" href="./css/credit_user.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="#home">
+    <div class="profile-img">
+      <img src="" alt="">
+    </div>
+    <p class="profile-name">Julius Ngwu</p> 
+  </a>
+  <a href="user_create-account.html">Create Account</a>
+  <a href="user_acc_profile.html">Account Profile </a>
+  <a class="active" href="transaction_detail.html">Histroy</a>
+</div>
+
+<div class="content">
+  <div class="dashboard-header">
+    <h2>Dashboard</h2>
+    <p>This example use media queries to transform the sidebar screen size is 700px or less.</p> 
+  </div>
+  <div class="dasboard-body">
+      <div class="header-bg">
+          <img src="./image/transaction_bg.jpg" alt="">
+      </div>
+      <div class="details-container">
+          <div class="transactions">
+              <form>
+                  <div class="form-header">
+                      <h4>Credit User Account</h4>
+                      <p id="registerMessage"></p>
+                      <p id="registerSuccess"></p>
+                  </div>
+                <div class="input"> 
+                  <select name="" type="text" class="form-control" >
+                    <option value = "">Select type</option>
+                    <option value = "">Current</option><br />
+                    <option value = "">Savings</option><br />
+                  </select>
+                  <input type="text" placeholder="Enter account number">
+                  <input type="text" placeholder="Depositor's name">
+                  <input type="text" placeholder="Amout">
+                  <input type="text" placeholder="Depositors address">
+                  <input type="text" placeholder="Depositor's phone number">
+                </div>
+                  <p class="sign-up"> 
+                    <input type="button" value="Deposit" class="btn">
+                  </p>
+              </form>
+
+          </div>
+      </div>
+  </div>
+</div>
+<footer>
+    <p>My Banka, Copyright &copy; 2019</p>
+</footer> 
+</body>
+</html>

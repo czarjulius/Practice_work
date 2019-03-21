@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/dashboard.css">
+<link rel="stylesheet" href="./css/transaction_detail.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="#home">
+    <div class="profile-img">
+      <img src="" alt="">
+    </div>
+    <p class="profile-name">Julius Ngwu</p> 
+  </a>
+  <a href="user_create-account.html">Create Account</a>
+  <a href="user_acc_profile.html">Account Profile </a>
+  <a class="active" href="transaction_detail.html">Histroy</a>
+</div>
+
+<div class="content">
+  <div class="dashboard-header">
+    <h2>Dashboard</h2>
+    <p>This example use media queries to transform the sidebar screen size is 700px or less.</p> 
+  </div>
+  <div class="dasboard-body">
+      <div class="header-bg">
+          <img src="./image/transaction_bg.jpg" alt="">
+      </div>
+      <div class="details-container">
+          <div class="transactions">
+              <table>
+                <tr>
+                  <th>Acount Name</th>
+                  <th>Account Number</th>
+                  <th>Tran. Type</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Depositor</th>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Crdit</td>
+                  <td>03 Jan. 2019</td>
+                  <td>5,000</td>
+                  <td>Self</td>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Debit</td>
+                  <td>03 Jan. 2019</td>
+                  <td class="debit-cash">-5,000</td>
+                  <td>Self</td>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Crdit</td>
+                  <td>03 Jan. 2019</td>
+                  <td>5,000</td>
+                  <td>Emmanuel Ohie</td>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Crdit</td>
+                  <td>03 Jan. 2019</td>
+                  <td>5,000</td>
+                  <td>Self</td>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Debit</td>
+                  <td>03 Jan. 2019</td>
+                  <td class="debit-cash">-5,000</td>
+                  <td>Self</td>
+                </tr>
+                <tr>
+                  <td>Julius Ngwu</td>
+                  <td>0734215547</td>
+                  <td>Crdit</td>
+                  <td>03 Jan. 2019</td>
+                  <td>5,000</td>
+                  <td>Emmanuel Ohie</td>
+                  
+                </tr>
+                <tr class="nextPrevious">
+                  <td colspan="5"> << Previous</td>
+                  <td>Next >></td>                   
+                </tr>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+<footer>
+    <p>My Banka, Copyright &copy; 2019</p>
+</footer> 
+</body>
+</html>

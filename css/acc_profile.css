@@ -1,0 +1,40 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.details-container {
+  display: flex;
+  margin-top: 20px;
+}
+.left {
+flex: 3;
+display: flex;
+}
+.table {
+  flex: 1;
+}
+.right {
+  flex: 1;
+  text-align: center;
+}
+.right span {
+  color: rgb(51, 97, 51);
+}
+.detail-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
