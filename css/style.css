@@ -63,12 +63,12 @@ form {
 
 .form-header {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 10px;
-  color:#035AB7;
+  color:rgb(3, 26, 54);
 }
 .input{
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 input[type="text"],input[type="password"],input[type="email"] {
@@ -86,11 +86,11 @@ input[type="text"],input[type="password"],input[type="email"] {
 
 label{
   font-size: 14px;
-  color:rgb(128, 159, 192);
+  color:rgb(3, 26, 54);
 }
 
 input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover {
-  border: 1px solid #4484CE;
+  border: 1px solid rgb(3, 26, 54);
   cursor:text;
   transition:0.5;
 }
@@ -99,7 +99,7 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover 
   background-color: rgb(3, 26, 54);
   width:100%;
   padding: 12px;
-  border: 1px solid #035AB7;
+  border: 1px solid rgb(3, 26, 54);
   border-radius: 8px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
