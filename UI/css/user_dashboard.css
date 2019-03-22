@@ -89,3 +89,13 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover 
   font-size: 18px;
   color: rgb(3, 26, 54);
 }
+
+@media screen and (max-width: 768px) {
+  .transactions {
+    width: 90%;
+    height: 100%;
+  }
+  input[type="text"],input[type="password"],input[type="email"],select[type="text"] {
+    width:100%;
+  }
+}

@@ -44,9 +44,10 @@ margin: 15px auto;
 
 .logo {
 display: inline-block;
-font-size: 22px;
+font-size: 25px;
 margin-top: 10px;
 margin-left: 20px;
+font-family: Jokerman;
 }
 
 .navbar-toggle {

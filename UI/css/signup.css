@@ -20,7 +20,7 @@ form {
 @media screen and (max-width: 1024px) {
     .register-form{
     width: 45%;
-    height: 70%;
+    height: 50%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -49,25 +49,25 @@ form {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
   .descriptions{
     width: 75%;
   }
   
   .register-form{
     width: 90%;
-    height: 90%;
-
+    height: 80%;
+    margin-top: 80px;
   }
   form { 
     width: 98%;
-    height: 80%;
+    height: 100%;
   }
   .input{
     padding-top: 10px;
   }
   .form-header {
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 5px;
   }
 }

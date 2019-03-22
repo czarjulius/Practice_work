@@ -13,7 +13,6 @@ th, td {
 tr:nth-child(even){background-color: #f2f2f2}
 
 .details-container {
-  display: flex;
   margin-top: 20px;
 }
 .left {
@@ -51,4 +50,9 @@ display: flex;
 a:hover {
   font-size: 12px;
   transition: 0.5s;
+  }
+  @media screen and (min-width: 700px) {
+    .details-container{
+      display: flex;
+    }
   }
