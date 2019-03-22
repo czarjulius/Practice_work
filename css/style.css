@@ -84,6 +84,12 @@ input[type="text"],input[type="password"],input[type="email"] {
   cursor: text;
 }
 
+.reset-pass{
+  text-decoration: none;
+  font-size: 12px;
+  color:rgb(3, 26, 54);
+}
+
 label{
   font-size: 14px;
   color:rgb(3, 26, 54);
@@ -93,6 +99,7 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover 
   border: 1px solid rgb(3, 26, 54);
   cursor:text;
   transition:0.5;
+  color: rgb(3, 26, 54);
 }
 
 .btn {
