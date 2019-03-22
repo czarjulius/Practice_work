@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="./css/dashboard.css">
 <link rel="stylesheet" href="./css/user_dashboard.css">
 
@@ -11,41 +12,44 @@
 <div class="sidebar">
   <a href="#home">
     <div class="profile-img">
-      <img src="" alt="">
+      <img src="./image/user.png" alt="">
     </div>
     <p class="profile-name">Julius Ngwu</p> 
   </a>
+  <a href="user_acc_profile.html">Account Details </a>
   <a class="active" href="user_create-account.html">Create Account</a>
-  <a href="user_acc_profile.html">Account Profile </a>
   <a href="transaction_detail.html">Histroy</a>
+  <a href="./login.html">Log out</a>
 </div>
 
 <div class="content">
   <div class="dashboard-header">
-    <h2>Dashboard</h2>
-    <p>This example use media queries to transform the sidebar to a top.</p>  
+    <h2>Open New Account</h2>
   </div>
   <div class="dasboard-body">
-    <div  class="create-account">
-        <form>
-            <div class="form-header">
-                <h4>Create Account</h4>
+      <div class="details-container">
+        <div class="transactions">
+          <form>
+              <div class="form-header">
                 <p id="registerMessage"></p>
                 <p id="registerSuccess"></p>
+              </div>
+            <div class="input"> 
+              <select name="" type="text" class="form-control" >
+                <option value = "">Select type</option>
+                <option value = "">Current</option><br />
+                <option value = "">Savings</option><br />
+              </select>
+              <input type="text" placeholder="address">
+              <input type="text" placeholder="Next of kin">
+              <input type="text" placeholder="Next of kin mobile number">
             </div>
-          <div class="input"> 
-            <label for="email"> Account type </label>
-            <select name="" type="text" class="form-control" >
-              <option value = "">Select type</option>
-              <option value = "">Current</option><br />
-              <option value = "">Savings</option><br />
-            </select>
-          </div>
-            <p class="sign-up"> 
-              <input type="button" value="Create" class="btn">
-            </p>
-        </form>
-    </div>
+              <p class="sign-up"> 
+                <input type="button" value="Create" class="btn">
+              </p>
+          </form>
+        </div>
+      </div>
   </div>
 </div>
 <footer>

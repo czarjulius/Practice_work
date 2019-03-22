@@ -2,27 +2,28 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css/dashboard.css">
 <link rel="stylesheet" href="./css/transaction_detail.css">
 </head>
 <body>
 
-<div class="sidebar">
-  <a href="#home">
-    <div class="profile-img">
-      <img src="" alt="">
+    <div class="sidebar">
+      <a href="#home">
+        <div class="profile-img">
+          <img src="./image/user.png" alt="">
+        </div>
+        <p class="profile-name">Julius Ngwu</p> 
+      </a>
+      <a href="user_acc_profile.html">Account Details </a>
+      <a href="user_create-account.html">Create Account</a>
+      <a class="active" href="transaction_detail.html">Histroy</a>
+      <a href="./login.html">Log out</a>
     </div>
-    <p class="profile-name">Julius Ngwu</p> 
-  </a>
-  <a href="user_create-account.html">Create Account</a>
-  <a href="user_acc_profile.html">Account Profile </a>
-  <a class="active" href="transaction_detail.html">Histroy</a>
-</div>
 
 <div class="content">
   <div class="dashboard-header">
-    <h2>Dashboard</h2>
-    <p>This example use media queries to transform the sidebar screen size is 700px or less.</p> 
+    <h2>Transaction Details</h2>
   </div>
   <div class="dasboard-body">
       <div class="header-bg">
@@ -42,7 +43,7 @@
                 <tr>
                   <td>Julius Ngwu</td>
                   <td>0734215547</td>
-                  <td>Crdit</td>
+                  <td>Credit</td>
                   <td>03 Jan. 2019</td>
                   <td>5,000</td>
                   <td>Self</td>
@@ -58,7 +59,7 @@
                 <tr>
                   <td>Julius Ngwu</td>
                   <td>0734215547</td>
-                  <td>Crdit</td>
+                  <td>Credit</td>
                   <td>03 Jan. 2019</td>
                   <td>5,000</td>
                   <td>Emmanuel Ohie</td>
@@ -66,7 +67,7 @@
                 <tr>
                   <td>Julius Ngwu</td>
                   <td>0734215547</td>
-                  <td>Crdit</td>
+                  <td>Credit</td>
                   <td>03 Jan. 2019</td>
                   <td>5,000</td>
                   <td>Self</td>
@@ -82,16 +83,17 @@
                 <tr>
                   <td>Julius Ngwu</td>
                   <td>0734215547</td>
-                  <td>Crdit</td>
+                  <td>Credit</td>
                   <td>03 Jan. 2019</td>
                   <td>5,000</td>
                   <td>Emmanuel Ohie</td>
                   
                 </tr>
                 <tr class="nextPrevious">
-                  <td colspan="5"> << Previous</td>
-                  <td>Next >></td>                   
-                </tr>
+                  <td><a href="#" ><i class="fa fa-angle-double-left"></i> Previous</i></a></td>
+                  <td><a href="#" >Next <i class="fa fa-angle-double-right"></i></i></a></td> 
+                  <td colspan="4"></td>                 
+                  </tr>
               </table>
           </div>
       </div>

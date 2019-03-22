@@ -2,7 +2,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
 }
 
 th, td {
@@ -25,10 +25,10 @@ tr:nth-child(even){background-color: #f2f2f2}
   color: rgb(247, 9, 9);
 }
 
-.nextPrevious td {
-  padding: 20px;
+.nextPrevious td a{
+  padding: 15px;
   font-size: 18px;
-  color: rgb(34, 61, 20);
+  color: rgb(3, 26, 54);
 }
 
 .fa{
@@ -79,7 +79,7 @@ padding: 10px;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: rgb(3, 26, 54);
 }
 
 input:focus + .slider {
@@ -114,19 +114,18 @@ input[type="text"] {
   padding:5px;
   border-radius: 5px;
   font-size:1em;
-  height:25px;
+  height:35px;
   outline:none;
-  width:50%;
+  width:70%;
   cursor: text;
 }
 
 .btn {
-  background: #035AB7;
+  background: rgb(3, 26, 54);
   width:20%;
-  padding: 5px;
+  padding: 2px;
   border: 1px solid #035AB7;
   border-radius: 8px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  margin-top: 10px;
 }

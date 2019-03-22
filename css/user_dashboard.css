@@ -1,6 +1,16 @@
 .dasboard-body {
-  display: flex;
 }
+
+.details-container {
+  display: flex;
+  margin-top: 20px;
+  text-align: center;
+}
+.transactions {
+  overflow-x:auto;
+  margin: auto;
+}
+
 .create-account {
   margin: auto;
   width: 30%;
@@ -27,17 +37,18 @@ input[type="text"],input[type="password"],input[type="email"],select[type="text"
   padding:5px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  color:rgb(45, 46, 48);
+  color:rgb(245, 237, 237);
   font-size:1em;
-  height:32px;
+  height:37px;
   outline:none;
-  width:100%;
+  width:50%;
   cursor: text;
+  margin-top: 20px;
 }
 
 select[type="text"] {
   cursor: pointer;
-  color:rgb(128, 159, 192);
+  color:rgb(141, 136, 136);
   margin-top: 10px;
 }
 
@@ -53,8 +64,8 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover 
 }
 
 .btn {
-  background: #035AB7;
-  width:100%;
+  background: rgb(3, 26, 54);
+  width:50%;
   padding: 12px;
   border: 1px solid #035AB7;
   border-radius: 8px;
@@ -69,4 +80,10 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover 
   padding-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
+}
+
+.nextPrevious td {
+  padding: 20px;
+  font-size: 18px;
+  color: rgb(3, 26, 54);
 }

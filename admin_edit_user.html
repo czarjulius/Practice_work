@@ -3,25 +3,24 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./css/dashboard.css">
-<link rel="stylesheet" href="./css/admin_dashboard.css">
+<link rel="stylesheet" href="./css/staff_dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<div class="sidebar">
-  <a href="#home">
-    <div class="profile-img">
-      <img src="./image/user.png" alt="">
+    <div class="sidebar">
+      <a href="#home">
+        <div class="profile-img">
+          <img src="./image/user.png" alt="">
+        </div>
+        <p class="profile-name">Julius Ngwu</p> 
+      </a>
+      <a class="active" href="admin_activate_user.html">Deactivate Account</a>
+      <a href="admin_edit_role.html">Change Role</a>
+      <a href="admin_edit_user.html">View Accounts</a>
+      <a href="index.html">Log Out</a>
     </div>
-    <p class="profile-name">Julius Ngwu</p> 
-  </a>
-  <a class="active" href="admin_activate_user.html">Deactivate Account</a>
-  <a href="admin_edit_role.html">Change Role</a>
-  <a href="admin_edit_user.html">View Accounts</a>
-  <a href="index.html">Log Out</a>
-
-</div>
 
 <div class="content">
   <div class="dashboard-header">
@@ -34,66 +33,62 @@
       <div class="details-container">
           <div class="transactions">
               <table>
-                  <tr>
+                  <tr class="nextPrevious">
                     <td><input type="text" placeholder="Account Number">
                       <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                     </td> 
-                    <td colspan="4"></td>                  
+                    <td colspan="3"></td>                  
                   </tr>
                 <tr>
                   <th>Acount Name</th>
                   <th>Account Number</th>
-                  <th>Acc. Type</th>
-                  <th>Opened</th>
-                  <th>Active</th>
+                  <th>Tran. Type</th>
+                  <th>Date</th>
+                  <th>Action</th>
                 </tr>
                 <tr>
                   <td>Julius Ngwu</td>
                   <td>0734215547</td>
-                  <td>Savings</td>
+                  <td>Credit</td>
                   <td>03 Jan. 2019</td>
-                  <td class="staff-action">                      
-                    <label class="switch">
-                      <input type="checkbox" checked>
-                      <span class="slider round"></span>
-                    </label>
+                  <td class="staff-action">
+                      <a href="#" ><i class="fa fa-eye"></i></a>
+                      <a href="#" ><i class="fa fa-pencil-square-o"></i></a>
+                      <a href="#" ><i class="fa fa-trash-o"></i></a>
                   </td>
                 </tr>
                 <tr>
                   <td>Julius Ngwu</td>
                   <td>0734215547</td>
-                  <td>Current</td>
+                  <td>Credit</td>
                   <td>03 Jan. 2019</td>
-                  <td class="staff-action">                      
-                    <label class="switch">
-                      <input type="checkbox">
-                      <span class="slider round"></span>
-                    </label>
+                  <td class="staff-action">
+                      <a href="#" ><i class="fa fa-eye"></i></a>
+                      <a href="#" ><i class="fa fa-pencil-square-o"></i></a>
+                      <a href="#" ><i class="fa fa-trash-o"></i></a>
                   </td>
                 </tr>
                 <tr>
                   <td>Julius Ngwu</td>
                   <td>0734215547</td>
-                  <td>Savings</td>
+                  <td>Credit</td>
                   <td>03 Jan. 2019</td>
-                  <td class="staff-action">                      
-                    <label class="switch">
-                      <input type="checkbox" checked>
-                      <span class="slider round"></span>
-                    </label>
+                  <td class="staff-action">
+                      <a href="#" ><i class="fa fa-eye"></i></a>
+                      <a href="#" ><i class="fa fa-pencil-square-o"></i></a>
+                      <a href="#" ><i class="fa fa-trash-o"></i></a>
                   </td>
                 </tr>
                 
                 <tr>
                   <td>Julius Ngwu</td>
                   <td>0734215547</td>
-                  <td>Current</td>
+                  <td>Credit</td>
                   <td>03 Jan. 2019</td>
-                  <td class="staff-action">                      
-                    <label class="switch">
-                      <input type="checkbox" >
-                      <span class="slider round"></span>
-                    </label>
+                  <td class="staff-action">
+                      <a href="user_acc_profile.html" ><i class="fa fa-eye"></i></a>
+                      <a href="#" ><i class="fa fa-pencil-square-o"></i></a>
+                      <a href="#" ><i class="fa fa-trash-o"></i></a>
                   </td>
                 </tr>
                 <tr class="nextPrevious">

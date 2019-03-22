@@ -2,7 +2,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 0px solid #ddd;
 }
 
 th, td {
@@ -15,6 +15,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 .details-container {
   display: flex;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 .transactions {
   overflow-x:auto;
@@ -25,10 +26,10 @@ tr:nth-child(even){background-color: #f2f2f2}
   color: rgb(247, 9, 9);
 }
 
-.nextPrevious td {
-  padding: 20px;
+.nextPrevious td a{
+  padding: 15px;
   font-size: 18px;
-  color: rgb(34, 61, 20);
+  color: rgb(3, 26, 54);
 }
 
 .fa{
@@ -43,5 +44,24 @@ padding: 10px;
 }
 
 .fa-eye {
-  color: rgb(28, 34, 28);
+  color: rgb(3, 26, 54);
+}
+input[type="text"] {
+  padding:5px;
+  border-radius: 5px;
+  font-size:1em;
+  height:35px;
+  outline:none;
+  width:70%;
+  cursor: text;
+}
+
+.btn {
+  background: rgb(3, 26, 54);
+  width:20%;
+  padding: 2px;
+  border: 1px solid #035AB7;
+  border-radius: 8px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
 }
