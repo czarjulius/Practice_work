@@ -30,3 +30,13 @@ tr:nth-child(even){background-color: #f2f2f2}
   font-size: 18px;
   color: rgb(3, 26, 54);
 }
+
+.nextPrevious td a:hover{
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+a:hover {
+  font-size: 12px;
+  transition: 0.5s;
+  }

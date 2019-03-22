@@ -1,5 +1,7 @@
-.dasboard-body {
-}
+a:hover {
+  font-size: 12px;
+  transition: 0.5s;
+  }
 
 .details-container {
   display: flex;

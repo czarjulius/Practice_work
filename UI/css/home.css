@@ -26,6 +26,16 @@
   width:50%;
 }
 
+.nextPrevious td a:hover{
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+a:hover {
+  font-size: 12px;
+  transition: 0.5s;
+  }
+  
 .getStarted{
   margin-top: 10px;
   background-color: rgb(3, 26, 54);

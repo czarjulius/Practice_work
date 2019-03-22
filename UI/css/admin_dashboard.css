@@ -1,3 +1,8 @@
+a:hover {
+  font-size: 12px;
+  transition: 0.5s;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -15,6 +20,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 .details-container {
   display: flex;
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 .transactions {
   overflow-x:auto;
@@ -27,8 +33,13 @@ tr:nth-child(even){background-color: #f2f2f2}
 
 .nextPrevious td a{
   padding: 15px;
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(3, 26, 54);
+}
+
+.nextPrevious td a:hover{
+  font-size: 12px;
+  transition: 0.5s;
 }
 
 .fa{

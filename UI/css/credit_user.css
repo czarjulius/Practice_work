@@ -35,3 +35,12 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover 
 .credit-form{
   text-align: center;
 }
+.nextPrevious td a:hover{
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+a:hover {
+  font-size: 12px;
+  transition: 0.5s;
+  }

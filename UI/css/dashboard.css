@@ -34,8 +34,9 @@ a {
 }
 
 .sidebar a:hover:not(.active) {
-  box-shadow: 0 10px 20px rgba(10, 10, 10, 0.39), 0 3px 3px rgba(0,0,0,3.23);
-  color: white;
+    font-size: 12px;
+    transition: 0.5s;
+    color: white;
 }
 
 .profile-img {

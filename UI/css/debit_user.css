@@ -27,3 +27,12 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover 
   color: rgba(255, 255, 255, 0.8);
   margin-top: 20px;
 }
+.nextPrevious td a:hover{
+  font-size: 12px;
+  transition: 0.5s;
+}
+
+a:hover {
+  font-size: 12px;
+  transition: 0.5s;
+  }
