@@ -1,0 +1,50 @@
+{
+  "name": "practice_work",
+  "version": "1.0.0",
+  "description": "banka",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/czarjulius/Practice_work.git"
+  },
+  "author": "Julius Ngwu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/czarjulius/Practice_work/issues"
+  },
+  "homepage": "https://github.com/czarjulius/Practice_work#readme",
+  "dependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "bcrypt": "^3.0.4",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "cloudinary": "^1.13.2",
+    "coveralls": "^3.0.2",
+    "datauri": "^1.1.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "jsonwebtoken": "^8.5.0",
+    "mocha": "^6.0.2",
+    "multer": "^1.4.1",
+    "nodemailer": "^5.1.1",
+    "pg": "^7.8.1",
+    "supertest": "^3.4.2",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.2.2",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "nodemon": "^1.18.10",
+    "nyc": "^13.3.0"
+  }
+}
