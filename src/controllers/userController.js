@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import userModel from '../models/user';
 import generateToken from '../middlewares/generateToken';
+import { userInfo } from 'os';
 
 dotenv.config();
 
@@ -23,7 +24,7 @@ class UserController {
     };
 
     userModel.push(user);
-    const token = generateToken(user.id, user.email, user.isAdmin);
+    const token = generateToken(user.id, user.email, user.isAdmin, user.type);
     return res.header('x-access-token', token).status(201).json({
       status: '201',
       data: {
@@ -47,7 +48,7 @@ class UserController {
 
     const currentUser = userModel.find(user => user.email === email && user.password === password);
     if (currentUser) {
-      const token = generateToken(currentUser.id, currentUser.email, currentUser.isAdmin);
+      const token = generateToken(currentUser.id, currentUser.email, currentUser.isAdmin, currentUser.type);
       return res.header('x-access-token', token).status(200).json({
         status: '200',
         data: { currentUser, token },

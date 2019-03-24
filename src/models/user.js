@@ -17,6 +17,15 @@ const users = [
     type: 'user',
     isAdmin: false,
   },
+  {
+    id: 3,
+    email: 'micheal@gamil.com',
+    firstName: 'micheal',
+    phoneNumber: '08123447762',
+    password: '68994yt',
+    type: 'staff',
+    isAdmin: false,
+  },
 ];
 
 export default users;
