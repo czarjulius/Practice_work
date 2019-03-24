@@ -1,0 +1,29 @@
+Commit messages
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+
+feat(kafka): implement exactly once delivery
+- ensure every event published to kafka is delivered exactly once
+- implement error handling for failed delivery
+[Delivers #130635935]
+
+Branch Naming Convention
+{story type}-{2-3 word summary}-{pivotal tracker id}
+
+ch-travis-integration-111504508
+
+Pull Request Convention
+PR Title Convention
+#<story-id> story description
+
+PR Description Template (Markdown)
+#### What does this PR do?
+#### Description of Task to be completed?
+#### How should this be manually tested?
+#### Any background context you want to provide?
+#### What are the relevant pivotal tracker stories?
+#### Screenshots or gifs (if appropriate)
+#### Questions:
