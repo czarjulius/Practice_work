@@ -15,8 +15,6 @@ th, td {
   padding: 15px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
-
 .details-container {
   display: flex;
   margin-top: 20px;
@@ -139,4 +137,45 @@ input[type="text"] {
   border-radius: 8px;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 800px) {
+  table {
+    border: 0;
+  }
+  table caption {
+    font-size: 1.3em;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+  .table-footer{
+    margin-bottom: 40px;
+  }
 }

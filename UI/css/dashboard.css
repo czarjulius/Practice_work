@@ -108,13 +108,16 @@ footer {
 
 @media screen and (max-width: 400px) {
   .sidebar a {
-    text-align: center;
-    float: none;
+    padding: 10px;
+    font-size: 8px;
   }
   .profile-img {
     margin-left: 100px;
     display: none;
     }
+    .sidebar a:hover:not(.active) {
+      font-size: 9px;
+  }
 }
 @media screen and (min-width: 700px) {
   .profile-name {
@@ -139,3 +142,16 @@ footer {
     display: block;
   }
 }
+@media only screen
+    and (min-width: 400px) 
+    and (max-width: 699px) {
+      .profile-name {
+        display: none;
+      }
+      .profile-img {
+        display: none;
+        }
+        .sidebar a {
+          padding: 8px;
+        }
+    }

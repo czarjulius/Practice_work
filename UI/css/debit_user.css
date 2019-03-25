@@ -7,10 +7,14 @@ input[type="text"],input[type="password"],input[type="email"],select[type="text"
   font-size:1em;
   height:32px;
   outline:none;
-  width:23%;
+  width:30%;
   cursor: text;
-}
+  margin-top: 8px;
 
+}
+select[type="text"] {
+  cursor: pointer;
+}
 input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover {
   border: 1px solid #4484CE;
   cursor:text;
@@ -36,3 +40,18 @@ a:hover {
   font-size: 12px;
   transition: 0.5s;
   }
+
+  @media screen and (max-width: 1024px) {
+    form{
+      flex-wrap: wrap;
+    }
+    input[type="text"],input[type="password"],input[type="email"],select[type="text"] {
+      width:70%;
+      margin-top: 15px;
+  
+    }
+    .btn {
+      width:30%;
+    }
+  }
+  
