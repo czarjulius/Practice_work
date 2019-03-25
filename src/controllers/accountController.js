@@ -7,7 +7,7 @@ class AccountController {
     const account = {
       id: accountModel.length + 1,
       accountNumber: Math.random().toString().slice(2, 12),
-      createdOn: Date.now().toLocaleString(),
+      createdOn: new Date(),
       owner: id,
       type,
       status: 'active',

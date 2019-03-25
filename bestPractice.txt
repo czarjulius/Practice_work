@@ -27,3 +27,27 @@ PR Description Template (Markdown)
 #### What are the relevant pivotal tracker stories?
 #### Screenshots or gifs (if appropriate)
 #### Questions:
+
+
+/////Account\\\\\
+
+  check('accountNumber')
+    .exists()
+    .withMessage('Account Number is required')
+    .isNumeric()
+    .withMessage('Account Number must be a number')
+    .isLength({ min: 10 })
+    .withMessage('Account Number must have atleast 10 digits')
+    .isLength({ min: 10 })
+    .withMessage('Account Number cannot have more than 10 digits')
+    .matches(/^\S{3,}$/)
+    .withMessage('Account Number cannot contain whitespaces')
+    .trim(),
+  check('owner')
+    .exists()
+    .withMessage('Account owner is required')
+    .isNumeric()
+    .withMessage('Account owner must be a number')
+    .matches(/^\S{3,}$/)
+    .withMessage('Account owner cannot contain whitespaces')
+    .trim(),

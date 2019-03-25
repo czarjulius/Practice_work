@@ -1,12 +1,14 @@
 import express from 'express';
-import AccountController from '../controllers/accountController';
+import accountController from '../controllers/accountController';
 import auth from '../middlewares/authentication';
-import AdminController from '../controllers/adminController';
-import Role from '../middlewares/authorization';
+import adminController from '../controllers/adminController';
+import role from '../middlewares/authorization';
+import validateAccount from '../middlewares/validateBankAccount';
+import validateAccountNumber from '../middlewares/validateAccountNumber';
 const router = express.Router();
 
-router.post('/accounts', auth, AccountController.postAccount);
-router.patch('/accounts/:accountNumber', auth, Role.adminStaff, AdminController.updateAccount);
-router.delete('/accounts/:accountNumber', auth, Role.adminStaff, AdminController.deleteAccount);
+router.post('/accounts', auth, validateAccount, accountController.postAccount);
+router.patch('/account/:accountNumber', auth, validateAccountNumber, role.adminStaff, adminController.updateAccount);
+router.delete('/accounts/:accountNumber', auth, validateAccountNumber, role.adminStaff, adminController.deleteAccount);
 
 export default router;

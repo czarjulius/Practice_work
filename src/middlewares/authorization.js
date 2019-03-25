@@ -21,7 +21,6 @@ class Role {
   }
 
   static adminStaff(req, res, next) {
-    console.log(req.userData);
     if (req.userData.isAdmin === false || req.userData.type !== 'staff') {
       return res.status(403).json({
         status: 403,
