@@ -9,7 +9,6 @@ table {
   padding: 0;
   width: 100%;
   table-layout: fixed;
-  border: 0px solid #ddd;
 }
 
 th, td {
@@ -32,16 +31,27 @@ th, td {
 }
 
 .nextPrevious td a{
-  padding: 15px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 12px;
   color: rgb(3, 26, 54);
 }
 
 .nextPrevious td a:hover{
-  font-size: 12px;
+  font-size: 10px;
   transition: 0.5s;
 }
 
+.save{
+  background-color: #ccc;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.save:hover{
+  font-size: 10px;
+  transition: 0.5s;
+}
 .fa{
 padding: 10px;
 }
@@ -118,7 +128,7 @@ select[type="text"]{
   font-size:1em;
   height:32px;
   outline:none;
-  width:92%;
+  width:40%;
   cursor: pointer;
 }
 input[type="text"] {
@@ -141,6 +151,22 @@ input[type="text"] {
   color: rgba(255, 255, 255, 0.8);
 }
 
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table th,
+table td {
+padding: .625em;
+text-align: center;
+}
+
+table th {
+font-size: .85em;
+letter-spacing: .1em;
+text-transform: uppercase;
+}
 @media screen and (max-width: 800px) {
   table {
     border: 0;
