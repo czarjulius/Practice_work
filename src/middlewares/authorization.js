@@ -21,7 +21,7 @@ class Role {
   }
 
   static adminStaff(req, res, next) {
-    if (req.userData.isAdmin === false || req.userData.type !== 'staff') {
+    if (req.userData.isAdmin === false) {
       return res.status(403).json({
         status: 403,
         error: 'Access denied! You are not an Admin or a Staff',

@@ -65,6 +65,26 @@ input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover 
   transition:0.5;
 }
 
+input[type="file"] {
+  display: none;
+  color:rgb(245, 237, 237);
+  font-size:1em;
+  outline:none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
+  height:37px;
+  color:rgb(134, 132, 132);
+  font-size:1em;
+
+}
+
 .btn {
   background: rgb(3, 26, 54);
   width:50%;

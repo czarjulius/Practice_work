@@ -6,7 +6,7 @@ const users = [
     lastName: 'Ngwu',
     phoneNumber: '090897689',
     password: '4954i9549',
-    type: 'admin',
+    type: 'staff',
     isAdmin: true,
   },
   {
