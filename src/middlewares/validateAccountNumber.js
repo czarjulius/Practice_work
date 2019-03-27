@@ -13,7 +13,7 @@ const validateAccountNumber = (req, res, next) => {
       status: 400,
       error: 'Account Number must be a positive integer ',
     });
-  } if (accountNumber.length !== 9) {
+  } if (accountNumber.length !== 10) {
     return res.status(400).json({
       status: 400,
       error: 'Account Number must be a 10 digits ',

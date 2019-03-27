@@ -8,6 +8,7 @@ import validateAccountNumber from '../middlewares/validateAccountNumber';
 const router = express.Router();
 
 router.post('/accounts', auth, validateAccount, accountController.postAccount);
+router.get('/accounts', auth, role.adminStaff, accountController.getAccount);
 router.patch('/account/:accountNumber', auth, validateAccountNumber, role.adminStaff, adminController.updateAccount);
 router.delete('/accounts/:accountNumber', auth, validateAccountNumber, role.adminStaff, adminController.deleteAccount);
 

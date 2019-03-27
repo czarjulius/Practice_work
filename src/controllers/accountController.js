@@ -23,6 +23,13 @@ class AccountController {
       },
     });
   }
+
+  static getAccount(req, res) {
+    res.status(201).json({
+      status: '200',
+      data: accountModel,
+    });
+  }
 }
 
 export default AccountController;
