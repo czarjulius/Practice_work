@@ -2,7 +2,9 @@ import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
 import db from '../models/db';
 import generateToken from '../middlewares/generateToken';
-import { userSignup, userDetails, fullName } from '../models/userQuery';
+import {
+  userSignup, userDetails, fullName, allUser, userId,
+} from '../models/userQuery';
 
 dotenv.config();
 class User {
@@ -17,8 +19,7 @@ class User {
 
       const values = [firstName, lastName, email, hashedPassword, phoneNumber];
       const result = await db.query(userSignup, values);
-      const name = await db.query(fullName, [email]);
-      const token = generateToken(result, name, email);
+      const token = generateToken(result.rows[0].id, result.rows[0].email, result.rows[0].isadmin, result.rows[0].type);
       return res.header('x-access-token', token).status(201).json({
         status: 201,
         data: {
@@ -62,11 +63,10 @@ class User {
       }
 
       const rows = userEmail;
-      const name = await db.query(fullName, [email]);
-      const token = generateToken(rows, name, email);
       const {
         firstname, lastname, phonenumber, type, isadmin, registeredon,
       } = rows.rows[0];
+      const token = generateToken(rows.rows[0].id, rows.rows[0].email, rows.rows[0].isadmin, rows.rows[0].type);
       return res.header('x-access-token', token).status(200).json({
         status: 200,
         data: {
@@ -82,6 +82,51 @@ class User {
           },
 
         },
+      });
+    } catch (err) {
+      return res.status(500).json({
+        status: 500,
+        error: err.message,
+      });
+    }
+  }
+
+  static async getAllUsers(req, res) {
+    try {
+      const result = await db.query(allUser);
+      if (result.rowCount < 1) {
+        return res.status(404).json({
+          status: 400,
+          error: 'no user record created yet',
+        });
+      }
+      delete result.rows[0].password;
+      return res.status(200).json({
+        status: 200,
+        data: result.rows,
+      });
+    } catch (err) {
+      return res.status(500).json({
+        status: 500,
+        error: err.message,
+      });
+    }
+  }
+
+  static async getASpecificUser(req, res) {
+    try {
+      const { id } = req.params;
+      const { rows } = await db.query(userId, [id]);
+      if (!rows[0]) {
+        return res.status(404).json({
+          status: 404,
+          error: 'User not found',
+        });
+      }
+      delete rows[0].password;
+      return res.status(200).json({
+        status: 200,
+        data: rows[0],
       });
     } catch (err) {
       return res.status(500).json({

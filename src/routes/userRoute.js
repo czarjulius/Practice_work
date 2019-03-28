@@ -5,7 +5,8 @@ import { validateSignup, validateLogin } from '../middlewares/validateUser';
 const router = express.Router();
 
 router.post('/auth/signup', validateSignup, UserController.userSignup);
-// router.get('/user', UserController.getUser);
-// router.post('/auth/signin', validateLogin, UserController.login);
+router.get('/users', UserController.getAllUsers);
+router.get('/users/:id', UserController.getASpecificUser);
+router.post('/auth/signin', validateLogin, UserController.userLogin);
 
 export default router;
