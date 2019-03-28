@@ -1,6 +1,6 @@
 /* eslint-disable consistent-return */
 import { check, validationResult } from 'express-validator/check';
-import db from '../models/user';
+import db from '../models/db';
 
 const validateSignup = [
   check('firstName')
@@ -43,8 +43,8 @@ const validateSignup = [
   check('email')
     .isEmail()
     .withMessage('Please input a valid email address')
-    .custom(value => Promise.resolve(db.filter(user => user.email === value)).then((user) => {
-      if (user.length) throw new Error('email has already been registered');
+    .custom(value => db.query('select * from users where email = $1', [value]).then((user) => {
+      if (user.rowCount >= 1) throw new Error('email has already been registered');
     })),
   (req, res, next) => {
     const errors = validationResult(req);

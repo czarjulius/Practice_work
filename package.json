@@ -36,7 +36,9 @@
   "scripts": {
     "test": "mocha --timeout 15000 --require @babel/register ./src/tests/*.js --exit",
     "start": "nodemon --require @babel/register server.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "mig": "babel-node ./src/models/migrate.js"
+
   },
   "repository": {
     "type": "git",
