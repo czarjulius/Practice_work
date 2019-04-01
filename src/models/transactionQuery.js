@@ -6,11 +6,22 @@ const selectSpecificTransaction = 'SELECT * FROM transactions WHERE id= $1';
 
 const viewAllTransactions = 'SELECT * FROM transactions';
 
-const updateAccountBalance = 'UPDATE accounts SET balance = $1 WHERE accountNumber = $2';
+const updateAccountBalance = (operation) => {
+  const operationType = operation === 'credit' ? '+' : '-';
+  return `UPDATE 
+  accounts 
+  SET balance 
+  = balance ${operationType} $1
+  WHERE accountNumber = $2`;
+};
 
 const selectSpecificAccountBalance = 'SELECT balance FROM accounts WHERE accountNumber= $1';
 
 
 export {
-  createTransaction, selectSpecificTransaction, viewAllTransactions, updateAccountBalance, selectSpecificAccountBalance,
+  createTransaction,
+  selectSpecificTransaction,
+  viewAllTransactions,
+  updateAccountBalance,
+  selectSpecificAccountBalance,
 };

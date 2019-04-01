@@ -8,22 +8,23 @@ class AccountController {
   static async postAccount(req, res) {
     try {
       const { type, passportUrl } = req.body;
-      const { owner } = req.userData.id;
+      const {
+        id: userId, firstname, lastname, email,
+      } = req.authUser;
       const accountNumber = Math.random().toString().slice(2, 12);
 
-      const values = [accountNumber, owner, type, passportUrl];
+      const values = [accountNumber, userId, type, passportUrl];
       const result = await db.query(createAccount, values);
       return res.status(201).json({
         status: 201,
         data: {
           id: result.rows[0].id,
-          accountNumber: result.rows[0].accountNumber,
-          owner: result.rows[0].owner.id,
-          type: result.rows[0].type,
-          passportUrl: result.rows[0].passportUrl,
-          status: result.rows[0].status,
-          balance: result.rows[0].balance,
-          createdOn: result.rows[0].createdOn,
+          accountNumber: result.rows[0].accountnumber,
+          firstname,
+          lastname,
+          email,
+          type,
+          openingBalace: '0.00',
         },
       });
     } catch (err) {

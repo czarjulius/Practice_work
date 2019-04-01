@@ -4,10 +4,20 @@ import { expect } from 'chai';
 import { describe } from 'mocha';
 import supertest from 'supertest';
 import server from '../../server';
+import db from '../models/db';
 
 const api = supertest(server);
 
+async function clearTable() {
+  const query = 'DELETE FROM users';
+  return db.query(query);
+}
+
 describe('tests for user controller', async () => {
+  before(async () => {
+    await clearTable();
+  });
+
   describe('/POST create user', () => {
     it('should create a new user', (done) => {
       const user = {
@@ -16,6 +26,7 @@ describe('tests for user controller', async () => {
         email: 'julius@gmail.com',
         password: '123def',
         phoneNumber: '09088776654',
+        passportUrl: 'www.user.png',
         type: 'staff',
         isAdmin: true,
       };
@@ -27,7 +38,7 @@ describe('tests for user controller', async () => {
           expect(res.body.status).to.equal(201);
           expect(res.body).to.have.property('data');
           expect(res.body.data).to.have.property('token');
-          expect(res.body.data).to.have.property('user');
+          expect(res.body.data).to.have.property('id');
           expect(res.header).to.have.property('x-access-token');
           done();
         });
@@ -36,7 +47,6 @@ describe('tests for user controller', async () => {
     it('should not create a new user', (done) => {
       const user = {
         lastName: 'Ngwu',
-        otherName: 'Chukwukama',
         email: 'julius@gmail.com',
         password: '123def',
         phoneNumber: '09088776654',
@@ -59,7 +69,7 @@ describe('tests for user controller', async () => {
         email: 'julius@gmail.com',
         password: '123def',
       };
-      api.post('/api/v1/auth/login')
+      api.post('/api/v1/auth/signin')
         .send(user)
         .end((err, res) => {
           expect(res.status).to.equal(200);
@@ -67,8 +77,8 @@ describe('tests for user controller', async () => {
           expect(res.body.status).to.equal(200);
           expect(res.body).to.have.property('data');
           expect(res.body.data).to.have.property('token');
-          expect(res.body.data).to.have.property('user');
-          expect(res.header).to.have.property('x-auth-token');
+          expect(res.body.data).to.have.property('id');
+          expect(res.header).to.have.property('x-access-token');
           done();
         });
     });
@@ -78,11 +88,12 @@ describe('tests for user controller', async () => {
         email: 'julius@gmail.com',
         password: '123defgh',
       };
-      api.post('/api/v1/auth/login')
+      api.post('/api/v1/auth/signin')
         .send(user)
         .end((err, res) => {
           expect(res.status).to.equal(400);
           expect(res.body).to.have.property('error');
+          expect(res.body.error).to.equal('invalid email or password');
           done();
         });
     });

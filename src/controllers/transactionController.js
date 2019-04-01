@@ -11,7 +11,7 @@ class TransactionController {
     try {
       const { accountNumber } = req.params;
       const { amount } = req.body;
-      const { cashier } = req.userData.id;
+      const { id: cashier } = req.userData;
       const type = 'credit';
 
       const { rows } = await db.query(accountDetails, [accountNumber]);
@@ -22,9 +22,8 @@ class TransactionController {
         });
       }
 
-      let balance = await db.query(selectSpecificAccountBalance, [accountNumber]) + amount;
 
-      balance = await db.query(updateAccountBalance, [accountNumber]);
+      const balance = await db.query(updateAccountBalance('credit'), [amount, accountNumber]);
 
       const values = [accountNumber, amount, cashier, type, balance];
 
@@ -54,7 +53,7 @@ class TransactionController {
       const { accountNumber } = req.params;
       const { amount } = req.body;
       const { cashier } = req.userData.id;
-      const type = 'credit';
+      const type = 'debit';
 
       const { rows } = await db.query(accountDetails, [accountNumber]);
       if (!rows[0]) {
@@ -64,9 +63,8 @@ class TransactionController {
         });
       }
 
-      let balance = await db.query(selectSpecificAccountBalance, [accountNumber]) - amount;
 
-      balance = await db.query(updateAccountBalance, [accountNumber]);
+      const balance = await db.query(updateAccountBalance('debit'), [amount, accountNumber]);
 
       const values = [accountNumber, amount, cashier, type, balance];
 

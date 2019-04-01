@@ -3,7 +3,7 @@ import { check, validationResult } from 'express-validator/check';
 
 const validateAccount = [
   check('type')
-    .exists()
+    .not().isEmpty()
     .withMessage('Account type is required')
     .matches(/^[a-zA-Z]+$/i)
     .withMessage('Account type must contain only alphabets')

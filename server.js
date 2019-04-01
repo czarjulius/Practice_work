@@ -22,3 +22,5 @@ server.use('*', (req, res) => res.status(404).json({
 const port = process.env.PORT || 3000;
 
 server.listen(port, () => { console.log(`Listening on port ${port}`); });
+
+export default server;

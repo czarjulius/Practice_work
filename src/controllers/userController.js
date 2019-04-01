@@ -24,16 +24,14 @@ class User {
         status: 201,
         data: {
           token,
-          user: {
-            id: result.rows[0].id,
-            firstName: result.rows[0].firstname,
-            lastName: result.rows[0].lastname,
-            email,
-            phoneNumber: result.rows[0].phonenumber,
-            type: result.rows[0].type,
-            isAdmin: result.rows[0].isadmin,
-            registeredOn: result.rows[0].registeredon,
-          },
+          id: result.rows[0].id,
+          firstName: result.rows[0].firstname,
+          lastName: result.rows[0].lastname,
+          email,
+          phoneNumber: result.rows[0].phonenumber,
+          type: result.rows[0].type,
+          isAdmin: result.rows[0].isadmin,
+          registeredOn: result.rows[0].registeredon,
         },
       });
     } catch (err) {
@@ -64,23 +62,21 @@ class User {
 
       const rows = userEmail;
       const {
-        firstname, lastname, phonenumber, type, isadmin, registeredon,
+        id, firstname, lastname, phonenumber, type, isadmin, registeredon,
       } = rows.rows[0];
       const token = generateToken(rows.rows[0].id, rows.rows[0].email, rows.rows[0].isadmin, rows.rows[0].type);
       return res.header('x-access-token', token).status(200).json({
         status: 200,
         data: {
           token,
-          user: {
-            firstName: firstname,
-            lastName: lastname,
-            email,
-            phoneNumber: phonenumber,
-            type,
-            isAdmin: isadmin,
-            registeredOn: registeredon,
-          },
-
+          id,
+          firstName: firstname,
+          lastName: lastname,
+          email,
+          phoneNumber: phonenumber,
+          type,
+          isAdmin: isadmin,
+          registeredOn: registeredon,
         },
       });
     } catch (err) {

@@ -3,7 +3,7 @@ import { check, validationResult } from 'express-validator/check';
 
 const validateAmount = [
   check('amount')
-    .exists()
+    .not().isEmpty()
     .withMessage('Amount is required')
     .isNumeric()
     .withMessage('Amount must be a number')
